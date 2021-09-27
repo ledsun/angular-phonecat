@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { UpgradeModule } from '@angular/upgrade/static';
 import { HttpClientModule } from '@angular/common/http' ;
 import { Phone } from './phone/phone.service';
+import { PhoneListController } from './phone-list/phone-list.component';
 
 @NgModule({
   imports: [
@@ -11,7 +12,7 @@ import { Phone } from './phone/phone.service';
     HttpClientModule,
   ],
   providers: [
-    Phone,
+    Phone, PhoneListController
   ]
 })
 export class AppModule {
