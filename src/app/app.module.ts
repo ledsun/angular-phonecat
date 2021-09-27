@@ -5,7 +5,9 @@ import { HttpClientModule } from '@angular/common/http' ;
 import { FormsModule } from '@angular/forms';
 import { Phone } from './phone/phone.service';
 import { PhoneListComponent } from './phone-list/phone-list.component';
-import { PhoneDetailController } from './phone-detail/phone-detail.component';
+import { PhoneDetailComponent } from './phone-detail/phone-detail.component';
+import { routeParamsProvider } from './ajs-upgraded-providers';
+import { CheckmarkPipe } from './core/checkmark/checkmark.pipe';
 
 @NgModule({
   imports: [
@@ -15,10 +17,13 @@ import { PhoneDetailController } from './phone-detail/phone-detail.component';
     FormsModule,
   ],
   providers: [
-    Phone, PhoneDetailController
+    Phone, 
+    routeParamsProvider,
   ],
   declarations: [
     PhoneListComponent,
+    PhoneDetailComponent,
+    CheckmarkPipe,
   ]
 })
 export class AppModule {
