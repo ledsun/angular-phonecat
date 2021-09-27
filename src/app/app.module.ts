@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { UpgradeModule } from '@angular/upgrade/static';
 import { HttpClientModule } from '@angular/common/http' ;
+import { FormsModule } from '@angular/forms';
 import { Phone } from './phone/phone.service';
-import { PhoneListController } from './phone-list/phone-list.component';
+import { PhoneListComponent } from './phone-list/phone-list.component';
 import { PhoneDetailController } from './phone-detail/phone-detail.component';
 
 @NgModule({
@@ -11,9 +12,13 @@ import { PhoneDetailController } from './phone-detail/phone-detail.component';
     BrowserModule,
     UpgradeModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [
-    Phone, PhoneListController, PhoneDetailController
+    Phone, PhoneDetailController
+  ],
+  declarations: [
+    PhoneListComponent,
   ]
 })
 export class AppModule {
