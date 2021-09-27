@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { downgradeComponent, getAngularJSGlobal } from "@angular/upgrade/static";
 
 import { Phone, PhoneData } from "../phone/phone.service";
 
@@ -25,10 +24,3 @@ export class PhoneDetailComponent {
   }
 }
 
-const angular = getAngularJSGlobal()
-angular.
-  module('phoneDetail')
-  .directive(
-    'phoneDetail',
-    downgradeComponent({ component: PhoneDetailComponent }) as angular.IDirectiveFactory
-  );

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { downgradeComponent, getAngularJSGlobal } from '@angular/upgrade/static';
 import { Phone, PhoneData } from '../phone/phone.service';
 
 @Component({
@@ -50,11 +49,3 @@ export class PhoneListComponent {
     return phones;
   }
 }
-
-const angular = getAngularJSGlobal()
-angular.
-  module('phoneList')
-  .directive(
-    'phoneList',
-    downgradeComponent({ component: PhoneListComponent }) as angular.IDirectiveFactory
-  );

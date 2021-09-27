@@ -1,7 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { downgradeInjectable, getAngularJSGlobal } from "@angular/upgrade/static";
 
 export interface PhoneData {
     name: string;
@@ -20,6 +19,3 @@ export class Phone {
     }
 }
 
-const angular = getAngularJSGlobal()
-angular.module('core.phone')
-  .factory('Phone', downgradeInjectable(Phone));
